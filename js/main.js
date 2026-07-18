@@ -332,6 +332,68 @@
     });
   });
 
+  /* ============ cookie consent + analytics (placeholders) ============ */
+  // TODO: replace with your real GA4 Measurement ID (analytics.google.com) and
+  // Meta Pixel ID (business.facebook.com/events_manager) before this can track anything.
+  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var META_PIXEL_ID = "0000000000000000";
+
+  function loadGoogleAnalytics(id) {
+    var s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+    document.head.appendChild(s1);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  }
+
+  function loadMetaPixel(id) {
+    /* eslint-disable */
+    (function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = true; n.version = "2.0"; n.queue = [];
+      t = b.createElement(e); t.async = true; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    /* eslint-enable */
+    window.fbq("init", id);
+    window.fbq("track", "PageView");
+  }
+
+  function activateAnalytics() {
+    if (GA_MEASUREMENT_ID.indexOf("XXXX") === -1) loadGoogleAnalytics(GA_MEASUREMENT_ID);
+    if (META_PIXEL_ID.indexOf("0000000000000000") === -1) loadMetaPixel(META_PIXEL_ID);
+  }
+
+  var CONSENT_KEY = "onae_cookie_consent";
+  var consentBanner = document.getElementById("cookie-consent");
+  var consentAccept = document.getElementById("cookie-accept");
+  var consentReject = document.getElementById("cookie-reject");
+  var storedConsent = localStorage.getItem(CONSENT_KEY);
+
+  if (storedConsent === "accepted") {
+    activateAnalytics();
+  } else if (storedConsent !== "rejected" && consentBanner) {
+    setTimeout(function () { consentBanner.classList.add("visible"); }, 1200);
+  }
+  if (consentAccept) {
+    consentAccept.addEventListener("click", function () {
+      localStorage.setItem(CONSENT_KEY, "accepted");
+      consentBanner.classList.remove("visible");
+      activateAnalytics();
+    });
+  }
+  if (consentReject) {
+    consentReject.addEventListener("click", function () {
+      localStorage.setItem(CONSENT_KEY, "rejected");
+      consentBanner.classList.remove("visible");
+    });
+  }
+
   /* ============ copy phone number ============ */
   document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
     el.addEventListener("dblclick", function (e) {
