@@ -1,0 +1,16 @@
+{
+  "name": "ONAE Estética Avanzada",
+  "short_name": "ONAE",
+  "description": "Centro de estética avanzada en Cáceres",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf6ee",
+  "theme_color": "#16241c",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

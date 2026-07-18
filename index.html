@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONAE Estética Avanzada | Centro de Estética en Cáceres</title>
+<meta name="description" content="Centro de estética avanzada en el Casco Antiguo de Cáceres. Limpieza facial, radiofrecuencia, depilación láser, presoterapia y tratamientos antiaging con atención 100% personalizada. Reserva tu valoración gratuita.">
+<meta name="keywords" content="estética Cáceres, centro estética avanzada, depilación láser Cáceres, radiofrecuencia facial, tratamiento acné, presoterapia, Cosmelan, ONAE estética">
+<meta name="author" content="ONAE Estética Avanzada">
+<meta name="theme-color" content="#16241c">
+<link rel="canonical" href="https://onae-estetica.example/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="ONAE Estética Avanzada | Cáceres">
+<meta property="og:description" content="El mejor resultado empieza cuando decides dedicarte tiempo. Tratamientos faciales y corporales de vanguardia en el corazón de Cáceres.">
+<meta property="og:image" content="assets/og-image.svg">
+<meta property="og:url" content="https://onae-estetica.example/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ONAE Estética Avanzada | Cáceres">
+<meta name="twitter:description" content="Tratamientos faciales y corporales de vanguardia con atención 100% personalizada.">
+<meta name="twitter:image" content="assets/og-image.svg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="manifest" href="assets/site.webmanifest">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "ONAE Estética Avanzada",
+  "image": "assets/og-image.svg",
+  "telephone": "+34636457342",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Gil Cordero, 9",
+    "addressLocality": "Cáceres",
+    "addressRegion": "Cáceres",
+    "postalCode": "10001",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "10:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "16:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": ["https://www.instagram.com/onae_estetica/"],
+  "url": "https://onae-estetica.example/"
+}
+</script>
+</head>
+<body>
+
+<!-- Animated background canvas (soft floating particles) -->
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<!-- Decorative floating botanical shapes -->
+<div class="botanical-layer" aria-hidden="true">
+  <svg class="botanical leaf-1" viewBox="0 0 100 100"><path d="M50 5C20 20 10 50 30 85C55 75 75 50 70 20C63 10 55 6 50 5Z" /></svg>
+  <svg class="botanical leaf-2" viewBox="0 0 100 100"><path d="M50 5C20 20 10 50 30 85C55 75 75 50 70 20C63 10 55 6 50 5Z" /></svg>
+  <svg class="botanical spark-1" viewBox="0 0 100 100"><path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" /></svg>
+  <svg class="botanical leaf-3" viewBox="0 0 100 100"><path d="M50 5C20 20 10 50 30 85C55 75 75 50 70 20C63 10 55 6 50 5Z" /></svg>
+  <svg class="botanical spark-2" viewBox="0 0 100 100"><path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" /></svg>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M20 3C10 9 5 20 12 35C24 30 33 20 30 9C27 4 23 3 20 3Z"/></svg>
+      </span>
+      <span class="logo-text">ONAE<em>Estética Avanzada</em></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#nosotras" class="nav-link">Nosotras</a></li>
+        <li><a href="#tratamientos" class="nav-link">Tratamientos</a></li>
+        <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://wa.me/34636457342?text=Hola%20ONAE%2C%20me%20gustar%C3%ADa%20reservar%20una%20valoraci%C3%B3n%20gratuita" class="btn btn-primary btn-small" target="_blank" rel="noopener">Reservar cita</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">Cáceres · Centro&nbsp;–&nbsp;Casco&nbsp;Antiguo</p>
+    <h1 class="hero-title reveal">ONAE <span>Estética Avanzada</span></h1>
+    <p class="hero-quote reveal">«El mejor resultado empieza cuando decides dedicarte tiempo.»</p>
+    <p class="hero-text reveal">Tratamientos faciales y corporales de vanguardia, seleccionados bajo criterio profesional para cuidar tu piel y tu bienestar — con seguridad, eficacia y resultados naturales.</p>
+
+    <div class="hero-actions reveal">
+      <a href="https://wa.me/34636457342?text=Hola%20ONAE%2C%20me%20gustar%C3%ADa%20reservar%20una%20valoraci%C3%B3n%20gratuita" class="btn btn-primary" target="_blank" rel="noopener">
+        Reserva tu valoración gratuita
+      </a>
+      <a href="#tratamientos" class="btn btn-ghost">Ver tratamientos</a>
+    </div>
+
+    <div class="hero-trust reveal">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span>Reseñas reales de nuestras clientas en Google</span>
+    </div>
+  </div>
+
+  <a href="#nosotras" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="nosotras">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <svg viewBox="0 0 200 200" class="about-botanical" aria-hidden="true">
+          <path d="M100 20 C60 40 40 90 70 170 C120 150 160 100 150 45 C135 20 115 15 100 20 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M100 45 C130 65 140 100 125 150" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 6"/>
+        </svg>
+        <div class="about-badge">
+          <strong>100%</strong>
+          <span>Atención<br>personalizada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow reveal">Sobre nosotras</p>
+      <h2 class="reveal">Cuidamos de ti con criterio profesional</h2>
+      <p class="reveal">En ONAE creemos que <strong>la piel saludable es siempre el mejor resultado estético</strong>. Por eso cada tratamiento se selecciona según tu tipo de piel y tus necesidades específicas, priorizando siempre seguridad, eficacia y resultados naturales.</p>
+      <p class="reveal">Soraya y Águeda te acompañan en cada visita con una atención cercana, transparente y totalmente personalizada — desde la primera valoración hasta el resultado final.</p>
+
+      <ul class="feature-list reveal">
+        <li><span class="feature-icon">✓</span> Diagnóstico personalizado en cada visita</li>
+        <li><span class="feature-icon">✓</span> Tecnología de vanguardia certificada</li>
+        <li><span class="feature-icon">✓</span> Resultados progresivos, seguros y naturales</li>
+        <li><span class="feature-icon">✓</span> Instalaciones impecables en pleno Casco Antiguo</li>
+      </ul>
+
+      <a href="#opiniones" class="link-arrow reveal">Descubre qué opinan nuestras clientas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon"><svg viewBox="0 0 48 48"><path d="M24 42s-16-9.5-16-21.5C8 13.6 13.2 8 20 8c2.9 0 5.6 1.4 4 4 5.4-3.4 10.6 1 10.6 8.5C40 32.5 24 42 24 42Z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+        <h3>Atención 100% personalizada</h3>
+        <p>Cada plan se diseña a tu medida, sin protocolos genéricos.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 26 12 42l12-6 12 6-4-16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <h3>Profesionales cualificadas</h3>
+        <p>Formación continua y criterio clínico en cada tratamiento.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon"><svg viewBox="0 0 48 48"><path d="M24 4 30 20 46 24 30 28 24 44 18 28 2 24 18 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <h3>Tecnología de vanguardia</h3>
+        <p>Equipos de última generación como Linfopress Evolution PRO.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon"><svg viewBox="0 0 48 48"><path d="M6 25 18 37 42 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Resultados visibles</h3>
+        <p>Cambios apreciables desde la primera sesión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="tratamientos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Nuestros servicios</p>
+      <h2 class="reveal">Tratamientos diseñados para tu piel</h2>
+      <p class="section-subtitle reveal">Diagnosticar, diseñar y tratar con estrategia: así conseguimos resultados naturales y duraderos.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <span class="service-icon">💧</span>
+        <h3>Limpieza facial profunda</h3>
+        <p>Hidratación profunda y limpieza en cabina que renueva la piel y devuelve luminosidad.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">✨</span>
+        <h3>Radiofrecuencia facial</h3>
+        <p>Estimula el colágeno de forma no invasiva para una piel más firme y tersa.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">🌿</span>
+        <h3>Cosmelan</h3>
+        <p>Tratamiento despigmentante profesional para unificar el tono de la piel.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">🩹</span>
+        <h3>Tratamiento para el acné</h3>
+        <p>Protocolos específicos para pieles con acné, adaptados a cada caso.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">🌸</span>
+        <h3>Rejuvenecimiento facial</h3>
+        <p>Antiaging global y renovación celular para una piel más joven y luminosa.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">💋</span>
+        <h3>Redensificación de labios</h3>
+        <p>Más volumen y definición, con resultados naturales y equilibrados.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">🔆</span>
+        <h3>Depilación láser</h3>
+        <p>Tecnología segura y eficaz, con resultados visibles desde las primeras sesiones.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">🌀</span>
+        <h3>Presoterapia Linfopress Evolution PRO</h3>
+        <p>Tecnología de vanguardia by Termosalud para moldear tu figura y activar la circulación.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">👣</span>
+        <h3>Pedicura</h3>
+        <p>Cuidado completo para unos pies sanos, cuidados y perfectos.</p>
+      </article>
+    </div>
+
+    <div class="services-cta reveal">
+      <p>¿No sabes qué tratamiento es para ti?</p>
+      <a href="https://wa.me/34636457342?text=Hola%20ONAE%2C%20no%20s%C3%A9%20qu%C3%A9%20tratamiento%20es%20para%20m%C3%AD%2C%20%C2%BFme%20pod%C3%A9is%20asesorar%3F" class="btn btn-primary" target="_blank" rel="noopener">Pide tu valoración gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIP BANNER ================= -->
+<section class="tip-banner">
+  <div class="container tip-inner reveal">
+    <div class="tip-text">
+      <p class="eyebrow">Consejo profesional</p>
+      <h2>Diagnosticar, diseñar y tratar con estrategia</h2>
+      <p>Los resultados más naturales y eficaces se consiguen cuando damos margen al tratamiento para actuar de forma progresiva. Empezar con tiempo y calma es siempre la mejor decisión para alcanzar tus objetivos estéticos.</p>
+    </div>
+    <ul class="tip-list">
+      <li><span>✓</span> Menor exposición solar entre sesiones</li>
+      <li><span>✓</span> Tiempo ideal para preparar la piel</li>
+      <li><span>✓</span> Tratamientos corporales antes del verano</li>
+      <li><span>✓</span> Sin prisas de última hora</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews" id="opiniones">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Opiniones</p>
+      <h2 class="reveal">Lo que dicen nuestras clientas</h2>
+      <p class="section-subtitle reveal">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        Reseñas reales y verificadas en Google
+      </p>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrap reveal">
+    <button class="review-nav prev" id="review-prev" aria-label="Reseña anterior">‹</button>
+    <div class="reviews-track" id="reviews-track">
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"He tenido una experiencia excelente en esta clínica de estética. Desde el primer momento me sentí muy bien atendida gracias a la profesionalidad, amabilidad y cercanía del equipo. Las instalaciones están impecables y los resultados han superado mis expectativas."</p>
+        <div class="review-author">
+          <span class="avatar">MA</span>
+          <div><strong>M.I. A.R.</strong><span>Hace un mes</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Estoy encantada con la efectividad de los tratamientos, radiofrecuencia y láser, para mí y mi hija. Soraya y Águeda son súper atentas, van más allá de lo profesional. No puedo estar más agradecida y contenta."</p>
+        <div class="review-author">
+          <span class="avatar">AA</span>
+          <div><strong>Almudena Álvaro Molano</strong><span>Hace 2 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"El mejor centro de estética de Cáceres. Ofrecen una atención personalizada y te miman como en ningún sitio. Resultados visibles desde la primera sesión. Sólo puedo dar las gracias por el trato y el asesoramiento."</p>
+        <div class="review-author">
+          <span class="avatar">MG</span>
+          <div><strong>Marta G.A. (Martita)</strong><span>Local Guide · Hace 5 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Acudí para que me asesoraran en depilación láser y desde el principio estuve encantada. Ofrecen una consulta inicial personalizada donde resuelven todas las dudas. Se nota que son grandes profesionales y le ponen mucho cariño a su trabajo."</p>
+        <div class="review-author">
+          <span class="avatar">UM</span>
+          <div><strong>Uxue Morales Rivera</strong><span>Hace 6 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Me siento encantada de acudir a este centro, el trato y dedicación que ponen en cada uno de los tratamientos personalizados para que una se sienta mejor es de diez. Gracias chicas por la amabilidad y la confianza."</p>
+        <div class="review-author">
+          <span class="avatar">GL</span>
+          <div><strong>Gema Lumbreras Salgado</strong><span>Hace 2 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Súper contenta con Soraya y con Águeda. Acudí para estar súper guapa el día de mi boda y desde entonces no las he abandonado. Siempre me recomiendan lo mejor para mí y me explican todo súper bien. Todo es de 10."</p>
+        <div class="review-author">
+          <span class="avatar">MP</span>
+          <div><strong>María Isabel Paz Ceballos</strong><span>Local Guide · Hace 5 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Estoy recibiendo un servicio de depilación láser en pecho y axilas, llevo 3 sesiones y estoy muy contento con el resultado. La maquinaria que tiene el centro es buena y sus servicios excelentes."</p>
+        <div class="review-author">
+          <span class="avatar">AF</span>
+          <div><strong>Alberto Fuente Mostaza</strong><span>Hace 7 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Simpáticas, agradables, con ganas de trabajar y que te sientas bien. Podría seguir sin parar de decir lo buenas profesionales que son y lo efectivos que son sus tratamientos."</p>
+        <div class="review-author">
+          <span class="avatar">GI</span>
+          <div><strong>Guillermo Iglesias</strong><span>Local Guide · Hace 5 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"He estado dos veces en la clínica y la experiencia ha sido magnífica, el trato es exquisito y las chicas son súper profesionales, se nota que están formadas en el sector. He quedado súper contento."</p>
+        <div class="review-author">
+          <span class="avatar">CN</span>
+          <div><strong>Carlos Javier Nevado Alamillo</strong><span>Hace 9 meses</span></div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Excelente servicio con una atención increíble desde el primer contacto. Estoy llevando un tratamiento a medio plazo y estoy muy contenta. Águeda y Soraya son espectaculares."</p>
+        <div class="review-author">
+          <span class="avatar">MJ</span>
+          <div><strong>Mariel Jaramillo Mondragón</strong><span>Hace 4 meses</span></div>
+        </div>
+      </article>
+
+    </div>
+    <button class="review-nav next" id="review-next" aria-label="Siguiente reseña">›</button>
+  </div>
+
+  <div class="reviews-dots" id="reviews-dots"></div>
+
+  <div class="reviews-footer reveal">
+    <a href="https://www.google.com/maps/search/?api=1&query=ONAE+ESTETICA+AVANZADA+Cáceres" target="_blank" rel="noopener" class="link-arrow">Ver todas las opiniones en Google →</a>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section class="location" id="ubicacion">
+  <div class="container location-grid">
+    <div class="location-info reveal">
+      <p class="eyebrow">Dónde estamos</p>
+      <h2>Visítanos en el corazón de Cáceres</h2>
+      <p class="location-address">
+        Calle Gil Cordero, 9<br>
+        Centro – Casco Antiguo<br>
+        10001 Cáceres
+      </p>
+
+      <div class="status-badge" id="status-badge">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Comprobando horario…</span>
+      </div>
+
+      <table class="hours-table">
+        <tbody>
+          <tr><th>Lunes – Jueves</th><td>10:00–14:00 y 16:00–20:00</td></tr>
+          <tr><th>Viernes</th><td>09:00–17:00</td></tr>
+          <tr><th>Sábado – Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+
+      <div class="location-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Calle+Gil+Cordero+9+Centro-Casco+Antiguo+10001+Caceres" target="_blank" rel="noopener" class="btn btn-primary">Cómo llegar</a>
+        <a href="tel:+34636457342" class="btn btn-ghost">636 45 73 42</a>
+      </div>
+    </div>
+
+    <div class="location-map reveal">
+      <iframe
+        title="Mapa de ONAE Estética Avanzada"
+        src="https://www.google.com/maps?q=Calle+Gil+Cordero+9+Centro-Casco+Antiguo+10001+Caceres&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Contacto</p>
+      <h2 class="reveal">Reserva tu cita o valoración gratuita</h2>
+      <p class="section-subtitle reveal">Cuéntanos qué necesitas y te contestamos por WhatsApp en cuanto lo veamos.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <a href="https://wa.me/34636457342" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">💬</span>
+          <div><strong>WhatsApp</strong><span>636 45 73 42</span></div>
+        </a>
+        <a href="tel:+34636457342" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div><strong>Teléfono</strong><span>636 45 73 42</span></div>
+        </a>
+        <a href="https://www.instagram.com/onae_estetica/" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">📷</span>
+          <div><strong>Instagram</strong><span>@onae_estetica</span></div>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Calle+Gil+Cordero+9+Centro-Casco+Antiguo+10001+Caceres" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">📍</span>
+          <div><strong>Dirección</strong><span>C. Gil Cordero, 9, Cáceres</span></div>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-row">
+          <label for="f-name">Nombre</label>
+          <input type="text" id="f-name" name="name" required placeholder="Tu nombre">
+        </div>
+        <div class="form-row">
+          <label for="f-phone">Teléfono</label>
+          <input type="tel" id="f-phone" name="phone" required placeholder="Tu teléfono">
+        </div>
+        <div class="form-row">
+          <label for="f-service">Tratamiento de interés</label>
+          <select id="f-service" name="service">
+            <option value="No lo sé todavía / Quiero asesoramiento">No lo sé todavía / Quiero asesoramiento</option>
+            <option>Limpieza facial profunda</option>
+            <option>Radiofrecuencia facial</option>
+            <option>Cosmelan</option>
+            <option>Tratamiento para el acné</option>
+            <option>Rejuvenecimiento facial</option>
+            <option>Redensificación de labios</option>
+            <option>Depilación láser</option>
+            <option>Presoterapia Linfopress</option>
+            <option>Pedicura</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-message">Mensaje (opcional)</label>
+          <textarea id="f-message" name="message" rows="3" placeholder="Cuéntanos lo que necesites…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Enviar por WhatsApp</button>
+        <p class="form-hint">Al enviar se abrirá WhatsApp con tu mensaje ya preparado para nosotras.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">ONAE<em>Estética Avanzada</em></span>
+      <p>El mejor resultado empieza cuando decides dedicarte tiempo.</p>
+      <a href="https://www.instagram.com/onae_estetica/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram de ONAE Estética Avanzada">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2.4.28 3.4 1.28s1.2 2.2 1.28 3.4c.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.28 2.4-1.28 3.4s-2.2 1.2-3.4 1.28c-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2.4-.28-3.4-1.28s-1.2-2.2-1.28-3.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.28-2.4 1.28-3.4S5.75 2.5 6.95 2.42C8.25 2.36 8.65 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-1 .05-1.9.23-2.6.93-.7.7-.88 1.6-.93 2.6C3.64 8.84 3.64 9.2 3.64 12s0 3.16.07 4.4c.05 1 .23 1.9.93 2.6.7.7 1.6.88 2.6.93 1.24.07 1.6.07 4.76.07s3.52 0 4.76-.07c1-.05 1.9-.23 2.6-.93.7-.7.88-1.6.93-2.6.07-1.24.07-1.6.07-4.4s0-3.16-.07-4.4c-.05-1-.23-1.9-.93-2.6-.7-.7-1.6-.88-2.6-.93C15.52 4 15.15 4 12 4Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.7-2a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"/></svg>
+      </a>
+    </div>
+
+    <nav class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotras">Nosotras</a></li>
+        <li><a href="#tratamientos">Tratamientos</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Tratamientos</h4>
+      <ul>
+        <li><a href="#tratamientos">Facial &amp; antiaging</a></li>
+        <li><a href="#tratamientos">Depilación láser</a></li>
+        <li><a href="#tratamientos">Presoterapia</a></li>
+        <li><a href="#tratamientos">Acné &amp; Cosmelan</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li>C. Gil Cordero, 9 · Cáceres</li>
+        <li><a href="tel:+34636457342">636 45 73 42</a></li>
+        <li>Lun–Jue 10–14h y 16–20h</li>
+        <li>Viernes 9–17h</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© <span id="year"></span> ONAE Estética Avanzada · Cáceres</p>
+      <div class="footer-legal">
+        <a href="legal.html#aviso-legal">Aviso legal</a>
+        <a href="legal.html#privacidad">Privacidad</a>
+        <a href="legal.html#cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<a href="https://wa.me/34636457342?text=Hola%20ONAE%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3Zm0 23.1c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.4 10.4 0 0 1-1.7-5.6c0-5.8 4.7-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.8 26.1 16 26.1Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-4.3-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.8 3.8 0 0 0-1.2 2.9c0 1.7 1.2 3.3 1.4 3.6.2.2 2.4 3.7 5.9 5.1.8.3 1.5.5 2 .7.8.2 1.6.2 2.2.1.7-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.6-.4Z"/></svg>
+</a>
+
+<button class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
