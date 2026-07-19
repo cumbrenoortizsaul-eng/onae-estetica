@@ -1,0 +1,10 @@
+{
+  "name": "Clínica Dental París",
+  "short_name": "Dental París",
+  "description": "Clínica dental en Cáceres · Dr. Luis Fco. García Serrano",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f5f1",
+  "theme_color": "#0e3038",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

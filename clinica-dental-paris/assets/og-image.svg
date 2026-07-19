@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10333c"/>
+      <stop offset="1" stop-color="#0d5c56"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g fill="#9fd8d0" opacity="0.12">
+    <path transform="translate(950 80) scale(2.2)" d="M50 8C32 8 20 21 22 39c1.3 12 6.4 17.6 8.4 30C32.8 84 36.8 93 42 93c5.6 0 5-11 8-11s2.4 11 8 11c5.2 0 9.2-9 11.6-24 2-12.4 7.1-18 8.4-30C80 21 68 8 50 8Z"/>
+    <path transform="translate(80 420) scale(1.4)" d="M50 8C32 8 20 21 22 39c1.3 12 6.4 17.6 8.4 30C32.8 84 36.8 93 42 93c5.6 0 5-11 8-11s2.4 11 8 11c5.2 0 9.2-9 11.6-24 2-12.4 7.1-18 8.4-30C80 21 68 8 50 8Z"/>
+  </g>
+  <rect x="100" y="185" width="66" height="66" rx="18" fill="#147d75"/>
+  <path transform="translate(113 196) scale(0.4)" d="M50 8C32 8 20 21 22 39c1.3 12 6.4 17.6 8.4 30C32.8 84 36.8 93 42 93c5.6 0 5-11 8-11s2.4 11 8 11c5.2 0 9.2-9 11.6-24 2-12.4 7.1-18 8.4-30C80 21 68 8 50 8Z" fill="#ffffff"/>
+  <text x="100" y="330" font-family="Georgia, serif" font-size="72" fill="#ffffff">Clínica Dental París</text>
+  <text x="100" y="392" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#9fd8d0">Dr. Luis Fco. García Serrano</text>
+  <text x="100" y="470" font-family="Arial, sans-serif" font-size="26" fill="#c3d2d5">Av. París, 29 · Cáceres — ☎ 927 04 26 06</text>
+  <text x="100" y="512" font-family="Arial, sans-serif" font-size="26" fill="#d9a441">★★★★★ 5,0 en Google</text>
+</svg>

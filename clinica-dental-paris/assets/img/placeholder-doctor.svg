@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 805">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3f1ef"/>
+      <stop offset="1" stop-color="#c9e4e0"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="805" fill="url(#g)"/>
+  <g fill="#147d75" opacity="0.35">
+    <circle cx="350" cy="300" r="95"/>
+    <path d="M350 430c-120 0-195 65-195 150v225h390V580c0-85-75-150-195-150Z"/>
+  </g>
+  <g fill="#10333c" text-anchor="middle" font-family="Arial, sans-serif">
+    <text x="350" y="700" font-size="30" font-weight="bold">Foto del Dr. Luis</text>
+    <text x="350" y="740" font-size="21" opacity="0.65">Sube la imagen real como</text>
+    <text x="350" y="770" font-size="21" opacity="0.65">assets/img/dr-luis.jpg</text>
+  </g>
+</svg>

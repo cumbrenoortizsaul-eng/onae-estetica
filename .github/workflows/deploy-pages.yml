@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [claude/sharp-keller-l7eg8k]
+    branches: [claude/clinica-dental-paris-website-mhjssy]
   workflow_dispatch:
 
 permissions:
@@ -29,6 +29,8 @@ jobs:
           mkdir -p _site
           cp index.html legal.html _site/
           cp -r css js assets _site/
+          mkdir -p _site/clinica-dental-paris
+          cp -r clinica-dental-paris/. _site/clinica-dental-paris/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
