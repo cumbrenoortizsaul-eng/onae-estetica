@@ -4,6 +4,8 @@ name: Fetch clinic photos
 # almacenamiento del usuario (el contenedor de la sesión de Claude no
 # tiene salida a ese CDN) y las guarda optimizadas en el repositorio.
 on:
+  push:
+    branches: [claude/clinica-dental-paris-website-mhjssy]
   workflow_dispatch:
 
 permissions:
@@ -16,7 +18,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Skip if photos already present
+        id: check
+        run: |
+          if [ -f clinica-dental-paris/assets/img/caso-1.jpg ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Download and optimize photos
+        if: steps.check.outputs.skip == 'false'
         run: |
           set -euo pipefail
           mkdir -p clinica-dental-paris/assets/img
@@ -30,6 +42,7 @@ jobs:
           ls -la clinica-dental-paris/assets/img/
 
       - name: Commit photos
+        if: steps.check.outputs.skip == 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
