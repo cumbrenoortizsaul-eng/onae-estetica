@@ -1,0 +1,38 @@
+name: Fetch clinic photos
+
+# Workflow puntual: descarga las fotos de la clínica dental desde el
+# almacenamiento del usuario (el contenedor de la sesión de Claude no
+# tiene salida a ese CDN) y las guarda optimizadas en el repositorio.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download and optimize photos
+        run: |
+          set -euo pipefail
+          mkdir -p clinica-dental-paris/assets/img
+          base="https://d2ol7oe51mr4n9.cloudfront.net/user_3ErdoXpYvJeVMR6NtOrkp6dsVuG"
+          curl -fsSL "$base/5c2b1df5-21f7-4ab4-a540-fef5b4eaa836.png" -o /tmp/caso-1.png
+          curl -fsSL "$base/cd2f7a66-26fc-41ee-92ce-3119a42724ce.png" -o /tmp/caso-2.png
+          curl -fsSL "$base/8fdf5f85-ef4e-45b7-9479-f7f89014101e.png" -o /tmp/caso-3.png
+          for n in 1 2 3; do
+            convert "/tmp/caso-$n.png" -resize '1000x1400>' -quality 82 "clinica-dental-paris/assets/img/caso-$n.jpg"
+          done
+          ls -la clinica-dental-paris/assets/img/
+
+      - name: Commit photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add clinica-dental-paris/assets/img/*.jpg
+          git commit -m "Add real before/after photos (fetched via workflow)"
+          git push
